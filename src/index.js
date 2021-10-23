@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import App from './00-pages/App';
+import App from './01-Pages/App';
 
 
 render(<App />, document.getElementById("root"))
