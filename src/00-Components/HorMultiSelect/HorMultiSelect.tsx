@@ -4,7 +4,7 @@ import HorDropDown from './HorDropdown/HorDropdown';
 import useDetectOutsideClick from '../../05-Hooks/useClickOutside/useClickOutside';
 import StyledHorMultiSelect from './StyledHorMultiSelectComponent.style';
 import ICON_LIST from '../../04-Constants/svg/iconList';
-import Icon from '../IconComponent';
+import Icon from '../IconComponent/Icon';
 
 import { ListItemInterface } from './MultiselectInterfaces';
 
@@ -53,11 +53,11 @@ const HorMultiSelect = ({ label, list }:
       >
         <p style={{ marginLeft: '12px', display: 'flex' }}>
           {currentlySelected.length > 0
-            ? currentlySelected.map((item:ListItemInterface):void => item.label).join(', ')
+            ? currentlySelected.map((item:ListItemInterface):string => item.label).join(', ')
             : label}
         </p>
         <div className="drop-down-icon">
-          <Icon size="26px" icon={isActive ? ICON_LIST.openedEye : ICON_LIST.closedEye} />
+          <Icon color="#cecece" size="26px" icon={isActive ? ICON_LIST.openedEye : ICON_LIST.closedEye} />
         </div>
       </div>
       <HorDropDown

@@ -4,10 +4,12 @@ import StyledCount from './countComponent.style';
 const CountComponent = ({ value, addFunction, substractFunction }:
   { value: number, addFunction: Function, substractFunction: Function }): JSX.Element => {
   const substractHander = () => (event: React.MouseEvent) => {
+    debugger;
     substractFunction();
     event.preventDefault();
   };
   const addittionHandler = () => (event: React.MouseEvent) => {
+    debugger;
     addFunction();
     event.preventDefault();
   };

@@ -21,7 +21,6 @@ const mockList = [
 ];
 
 const MainPage = ():JSX.Element => {
-  debugger;
   const count = useSelector(getCountfromStore);
   const dispatch = useDispatch();
   return (

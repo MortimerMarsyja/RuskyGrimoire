@@ -3,7 +3,9 @@ import colorPalette from './colorPalette';
 import makeSpace from '../06-Utils/spacing-function/index.ts';
 
 const GlobalStyle = createGlobalStyle`
-   font-family:Helvetica,Arial,sans-serif;
+    body{
+        font-family:Helvetica,Arial,sans-serif;
+    }
    .hor-form{
         display: flex;
         flex-wrap: wrap;
@@ -42,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
     }
     h1{
         font-size:3.2em;
+        color:${colorPalette.blueColor};
         font-weight:700;
         line-height: 1em;
         margin:${makeSpace('big')} 0;

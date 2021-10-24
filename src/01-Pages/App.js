@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 // logo
 // styles
+import GlobalStyle from '../07-Styles/global.style';
 import {
   BrowserRouter, Switch, Route, Redirect,
 } from 'react-router-dom';
@@ -11,11 +12,10 @@ import { Provider } from 'react-redux';
 // Paths
 import PATHS from '../04-Constants/Routes';
 // Components
-import Icon from '../00-Components/IconComponent';
+import Icon from '../00-Components/IconComponent/Icon';
 // Reducers
 import rootReducer from '../03-Reducers/rootReducer';
 // Constant
-import GlobalStyle from '../07-Styles/global.style';
 import iconList from '../04-Constants/svg/iconList';
 
 // Pages
@@ -39,7 +39,7 @@ const COMPONENT_PATHS = [
 
 function App() {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Provider store={createReduxStore()}>
         <BrowserRouter>
@@ -61,7 +61,7 @@ function App() {
           </Switch>
         </BrowserRouter>
       </Provider>
-    </div>
+    </>
   );
 }
 
