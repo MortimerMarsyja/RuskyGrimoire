@@ -11,6 +11,11 @@ const StyledCount = styled.div`
     p{
         text-align:center;
     }
+    button{
+        :hover{
+            cursor:pointer;
+        }
+    }
 `;
 
 export default StyledCount;

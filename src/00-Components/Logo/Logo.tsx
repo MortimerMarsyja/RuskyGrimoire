@@ -2,7 +2,7 @@ import React from 'react';
 // styles
 import StyledLogo from './Logo.style';
 
-const Logo = ({ size }:{size:string}):JSX.Element => (
+const Logo = ({ size,className }:{size:string,className:string}):JSX.Element => (
   <StyledLogo>
     <svg
       enableBackground="new 0 0 24 24"

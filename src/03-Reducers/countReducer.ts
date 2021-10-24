@@ -6,5 +6,5 @@ const reducers = {
   SUBSTRACT_FROM_COUNT: (state:number, payload:number) => state - payload,
 };
 
-export const countReducer = (state=0, action:{state:number,payload:number,type:string}):void => (reducers[action.type]
+export const countReducer = (state=0, action:{state:number,payload:number,type:string}):any => (reducers[action.type]
   || reducers.default)(state, action.payload);

@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
         justify-content: flex-end;
     }
    .hor-capsule {
-    width: 360px;
+    width: 370px;
     margin: 30px auto;
     display: flex;
     flex-direction: column;
