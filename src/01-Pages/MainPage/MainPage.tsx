@@ -28,7 +28,7 @@ const donutMock = {
     { label: "Bunny Popularity", value: 20 },
     { label: "Fox Popularity", value: 30 },
     {
-      label: "Oink Popularity",
+      label: "Pig Popularity",
       value: 15,
     },
     {

@@ -12,14 +12,15 @@ const StyledDonutGraph = styled.div`
     font-size: 16px;
     &-wrapper {
       svg {
+        width: 30px;
         display: inline-block;
         margin-right: 6px;
-        width: 120px;
       }
+      h2{margin:0 12px 0 0}
       margin-top: 14px;
       width: 300px;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-around;
     }
   }
@@ -39,6 +40,9 @@ const StyledDonutGraph = styled.div`
   }
   .active {
     border-radius: 30px;
+  }
+  h2{
+    margin-right: 12px;
   }
 `;
 

@@ -1,7 +1,7 @@
 // deps
 import React, { useState } from 'react';
 // components
-import SegmentComponent from './SegmentComponent';
+import SegmentComponent from './components/SegmentComponent';
 // components
 import StyledDonutGraph from './donutGraph.style';
 
@@ -76,17 +76,9 @@ const DonutGraph = ({
       ) : (
         <p className="donut-icon">{icons[0]}</p>
       )}
-      <div className="number-value">
-        {label && (
-        <h2>
-          {label.segmentData.value}
-          %
-        </h2>
-        )}
-      </div>
       {label && (
         <div className="label-wrapper">
-          <svg height="32px">
+          <svg height="28px">
             <circle
               className="label-color"
               cx="10"
@@ -97,6 +89,10 @@ const DonutGraph = ({
               strokeWidth="3px"
             />
           </svg>
+          <h2>
+            {label.segmentData.value}
+            %
+          </h2>
           <p>
             {label.segmentData.label}
           </p>
