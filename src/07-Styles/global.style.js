@@ -28,7 +28,11 @@ const GlobalStyle = createGlobalStyle`
     .small{
         height: 0.4em;
         box-sizing: content-box;
-        line-height: 4px;   
+        line-height: 4px;
+        width: 0.4em;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     * {
         margin: 0;

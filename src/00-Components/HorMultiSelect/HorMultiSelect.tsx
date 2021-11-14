@@ -1,11 +1,16 @@
 // Deps
 import React, { useRef, useState } from 'react';
+// Components
 import HorDropDown from './HorDropdown/HorDropdown';
-import useDetectOutsideClick from '../../05-Hooks/useClickOutside/useClickOutside';
-import StyledHorMultiSelect from './StyledHorMultiSelectComponent.style';
-import ICON_LIST from '../../04-Constants/svg/iconList';
 import Icon from '../IconComponent/Icon';
-
+// Hooks
+import useDetectOutsideClick from '../../05-Hooks/useClickOutside/useClickOutside';
+// Constants
+import ICON_LIST from '../../04-Constants/svg/iconList';
+// Styles
+import StyledHorMultiSelect from './StyledHorMultiSelectComponent.style';
+import colorPalette from '../../07-Styles/colorPalette';
+// Interfaces
 import { ListItemInterface } from './MultiselectInterfaces';
 
 const listFormatter = (list:ListItemInterface[]) => list
@@ -57,7 +62,7 @@ const HorMultiSelect = ({ label, list }:
             : label}
         </p>
         <div className="drop-down-icon">
-          <Icon color="#cecece" size="26px" icon={isActive ? ICON_LIST.openedEye : ICON_LIST.closedEye} />
+          <Icon color={colorPalette.greyColors[800]} size="26px" icon={isActive ? ICON_LIST.openedEye : ICON_LIST.closedEye} />
         </div>
       </div>
       <HorDropDown

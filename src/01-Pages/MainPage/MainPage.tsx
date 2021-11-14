@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Logo from '../../00-Components/Logo/Logo';
 import HorMultiSelect from '../../00-Components/HorMultiSelect/HorMultiSelect';
 import CountComponent from '../../00-Components/CountComponent/CountComponent';
+import HorDonutGraph from '../../00-Components/HorDonutGraph/DonutGraph';
 // Hooks
 // Actions
 import { addToCountAction, substractFromCountAction } from '../../02-Actions/countActions';
@@ -19,6 +20,23 @@ const mockList = [
   { label: 'Potatoes 🍟', type: 'junk', value: 'potatoes' },
   { label: 'Milk 🥛', type: 'drink', value: 'milk' },
 ];
+
+const donutMock = {
+  icons: ["🐰", "🦊", "🐷", "🙉"],
+  colors: ["#ffb997", "#f67e7d", "#843b62", "#621940"],
+  values: [
+    { label: "Bunny Popularity", value: 20 },
+    { label: "Fox Popularity", value: 30 },
+    {
+      label: "Oink Popularity",
+      value: 15,
+    },
+    {
+      label: "Monkey Popularity",
+      value: 25,
+    },
+  ],
+};
 
 const MainPage = ():JSX.Element => {
   const count = useSelector(getCountfromStore);
@@ -47,6 +65,14 @@ const MainPage = ():JSX.Element => {
           <HorMultiSelect label="Desired Food" list={mockList} />
           <button className="rounded" type="submit" onClick={(e) => { e.preventDefault(); }}>send</button>
         </form>
+        <div style={{ width: "450px" }}>
+        <HorDonutGraph
+          colors={donutMock.colors}
+          values={donutMock.values}
+          icons={donutMock.icons}
+          initialOffset={20}
+        />
+      </div>
       </div>
     </div>
   );
