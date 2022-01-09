@@ -6,6 +6,7 @@ import Logo from '../../00-Components/Logo/Logo';
 import HorMultiSelect from '../../00-Components/HorMultiSelect/HorMultiSelect';
 import CountComponent from '../../00-Components/CountComponent/CountComponent';
 import HorDonutGraph from '../../00-Components/HorDonutGraph/DonutGraph';
+import HorCalendar from '../../00-Components/HorCalendar/HorCalendar';
 // Hooks
 // Actions
 import { addToCountAction, substractFromCountAction } from '../../02-Actions/countActions';
@@ -61,18 +62,21 @@ const MainPage = ():JSX.Element => {
           addFunction={() => dispatch(addToCountAction(1))}
           substractFunction={() => dispatch(substractFromCountAction(1))}
         />
+        <div style={{ width: "450px" }}>
+          <HorDonutGraph
+            colors={donutMock.colors}
+            values={donutMock.values}
+            icons={donutMock.icons}
+            initialOffset={20}
+          />
+        </div>
+        <div>
+          <HorCalendar/>
+        </div>
         <form className="hor-form">
           <HorMultiSelect label="Desired Food" list={mockList} />
           <button className="rounded" type="submit" onClick={(e) => { e.preventDefault(); }}>send</button>
         </form>
-        <div style={{ width: "450px" }}>
-        <HorDonutGraph
-          colors={donutMock.colors}
-          values={donutMock.values}
-          icons={donutMock.icons}
-          initialOffset={20}
-        />
-      </div>
       </div>
     </div>
   );

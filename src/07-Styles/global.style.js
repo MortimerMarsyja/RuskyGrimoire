@@ -5,6 +5,7 @@ import makeSpace from '../06-Utils/spacing-function/index.ts';
 const GlobalStyle = createGlobalStyle`
     body{
         font-family:Helvetica,Arial,sans-serif;
+        height:100%;
     }
    .hor-form{
         display: flex;
@@ -12,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
         justify-content: flex-end;
     }
    .hor-capsule {
-    width: 370px;
     margin: 30px auto;
     display: flex;
     flex-direction: column;

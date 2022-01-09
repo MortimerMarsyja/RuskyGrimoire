@@ -10,9 +10,7 @@
       ],
       "baseUrl": "src",
       "paths": {
-        "@/*": [
-          "./*"
-        ]
+        "@/*": ["./*"]
       },
       "allowJs": true,
       "skipLibCheck": true,
@@ -28,9 +26,8 @@
       "noEmit": true,
       "jsx": "react"
     },
-    "include": [
-      "src"
-    ],
+    "include": 
+      ["next-env.d.ts", "twin.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": [
       "node_modules",
       "**/node_modules/*"
