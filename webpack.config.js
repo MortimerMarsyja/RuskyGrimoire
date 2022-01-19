@@ -17,6 +17,12 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         assetModuleFilename: "images/[hash][ext][query]"
     },
+    resolve: {
+        alias: {
+            root: path.resolve(__dirname, 'src'),
+        },
+        extensions: ['', '.js', '.jsx']
+    },
     module: {
         rules: [
             {

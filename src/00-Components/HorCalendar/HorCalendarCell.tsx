@@ -2,10 +2,9 @@ import React from 'react';
 
 
 interface HorCellProps {
-    content?: string | JSX.Element;
+    content?:string | JSX.Element;
     date:string;
     today:string;
-    formatFunc:(date:Date) => string;
     onClickAction:(date:string) => void;
     arrayOfCells:string[];
     cellsSelector:(strings:string[] | [])=>void;
@@ -20,7 +19,6 @@ export const HorCalendarCell = (props:HorCellProps):JSX.Element => {
         arrayOfCells,
         cellsSelector,
     } = props;
-
     const selectedCondition = arrayOfCells.includes(date)
     const onClickFunction = (date:string) => {
         if(selectedCondition){

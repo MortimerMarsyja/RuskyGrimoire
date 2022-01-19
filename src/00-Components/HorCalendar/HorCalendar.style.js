@@ -30,6 +30,7 @@ const StyledHorCalendar = styled.div`
         width: 100%;
         align-items: center;
         justify-content: space-around;
+        margin-bottom:12px;
         p{
             width:auto !important;
         }
@@ -37,17 +38,26 @@ const StyledHorCalendar = styled.div`
     .hor-calendar-cell{
         padding:9px;
         font-size: 12px;
-        border:1px solid #ccc;
+        border-left: 1px solid #ccc;
         width:191px;
         height:60px;
-        background-color:red;
+        box-sizing: border-box;
+        border-top: 1px solid #ccc;
+        &:nth-child(5n){
+            border-right: 1px solid #ccc;
+        }
+        &:nth-last-child(-n+5){
+            border-bottom: 1px solid #ccc;
+        }
+        &:last-child{
+            border-right: 1px solid #ccc;
+        }
     }
     .isToday{
-        color:blue;
         font-weight:bold;
     }
     .isSelected{
-        background-color:green;
+        background-color:#ccc;
     }
 `;
 
